@@ -1,0 +1,26 @@
+A POST operation will be made with the following data 
+- CustomerID 
+- Subtotal 
+
+The API will access a list of (CustomerID, SurchargePercentage) pairs that are stored in a mock 
+repository and then return when successful the following 
+- CustomerId 
+- Subtotal 
+- Surcharge Amount 
+- Total 
+The endpoint is called CalculateTotal and receives the data via a POST 
+
+Calculation Examples 
+- Given a subtotal of 100 and a surcharge of 5% return a total of 105 
+- Given a subtotal of 200 and a surcharge of 4% return a total of 208 
+- Given a subtotal of X and a surcharge of Y% return a total of X + (X * Y/100) 
+
+Stored Data 
+The following values are stored in a repository the API owns. This does not need to persist to a 
+database but represent a form of storage for this exercise. 
+
+Customer ID | Surcharge Percentage 
+  1 | 5 
+  2 | 10 
+  3 | 7 
+  4 | 4.25 
